@@ -2,7 +2,6 @@
 
 for f in ~/dotfiles/*; do
     if [[ "${f##*/}" != "install" ]]; then
-        file="$PWD/$f"
-        ln -s "$file" "$HOME/.${f##*/}"
+        ln -s "$f" "$HOME/.${f##*/}"
     fi
 done
