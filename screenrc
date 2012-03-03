@@ -1,0 +1,31 @@
+# On désactive tous les bips (ils seront en fait émis par les '^G' dans les messages)
+vbell on
+# Message qui s'affiche (et qui émet un bip car '^G') lors d'un bip dans la fenêtre active
+vbell_msg "^G^G*Bell*"
+# Message qui s'affiche (et qui émet un bip car '^G') lors d'un bip dans une fenêtre en arrière plan
+bell_msg "^GBell in window %n"
+autodetach on
+startup_message off
+nonblock on
+defutf8 on
+defscrollback 1000
+
+# show command name instead of zsh
+#shell /usr/bin/bash # (bash par defaut)
+shelltitle "%|bash"
+
+caption always
+hardstatus string "%?%F%{= kG}%:%{= Wk}%? [$USER@%H] %n : %t"
+
+
+# Always show lastline
+#hardstatus alwayslastline
+#hardstatus string "%{= kG}[ %{G}${USER}@%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}][%{Y}%l%{g}]%{=b C}%{W}"
+caption string "%{= g}[ %{G}${USER}@%H%{g} ][%= %{= w}%?%-Lw%?%{r}(%{W}%n*%f %t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c:%s %{g}][%{Y}%l%{g}]%{=b C}%{W}"
+
+#hardstatus alwayslastline
+#hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}][%{Y}%l%{g}]%{=b C}%{W}'
+
+# Allow scrollback in xterm
+termcap xterm* LP
+termcapinfo xterm ti@:te@

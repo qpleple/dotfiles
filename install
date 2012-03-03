@@ -1,0 +1,10 @@
+#!/bin/bash
+
+PWD=`pwd`
+
+for f in *; do
+    if [[ "$f" != "install" ]]; then
+        file="$PWD/$f"
+        ln -s "$file" "$HOME/.${f##*/}"
+    fi
+done
