@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 # invoke this every time when u change .zshrc to recompile it.
 function src()
 {

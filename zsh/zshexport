@@ -19,12 +19,18 @@ export ZLS_COLORS=$LS_COLORS
 export SVN_EDITOR=vim
 export PATH="${PATH}:${HOME}/bin"
 export PATH=$PATH:/usr/local/mysql/bin
+export PATH=$PATH:/usr/local/sbin
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export PATH=$PATH:/usr/share/pear
 export PATH=$HOME/local/node/bin:$PATH
 export NODE_PATH=$HOME/local/node:$HOME/local/node/lib/node_modules
 
-# to make python MySQLdb work (http://stackoverflow.com/questions/4559699/python-mysqldb-and-library-not-loaded-libmysqlclient-16-dylib)
-# export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:/usr/local/mysql/lib/"
+# Commented because brew doesn't like to have files ending by "-config" in $PATH:
+#
+#   Having additional scripts in your path can confuse software installed via
+#   Homebrew if the config script overrides a system or Homebrew provided
+#   script of the same name.
+# 
+# export PATH=$PATH:/Applications/MAMP/Library/bin
 
 [[ -s "/Users/qt/.rvm/scripts/rvm" ]] && source "/Users/qt/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

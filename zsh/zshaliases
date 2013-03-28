@@ -1,3 +1,4 @@
+#!/bin/zsh
 # aliases
 #alias cd='pushd' # allow to remember where I've been
 setopt PUSHD_SILENT
@@ -157,4 +158,8 @@ alias dql="app/console doctrine:query:dql"
 alias gi="grep -ri"
 alias g="grep -r"
 alias server="python -m SimpleHTTPServer"
-alias octave="/Applications/Octave.app/Contents/Resources/bin/octave"
+alias milou="ssh -A qt@short-edition.com"
+alias deploy="ssh-add && ssh -A qt@short-edition.com 'cd /home/short; bin/deploy.sh'"
+alias notebook="ipython notebook --pylab=inline"
+alias qtconsole="ipython qtconsole --pylab=inline"
+alias hg="ssh qpleple@hg.ucsd.edu"

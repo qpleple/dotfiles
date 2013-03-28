@@ -78,3 +78,5 @@ test -r /sw/bin/init.sh && . /sw/bin/init.sh
 
 
 
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
