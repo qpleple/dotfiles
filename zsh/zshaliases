@@ -12,7 +12,7 @@ setopt PUSHD_SILENT
 #						  -c 'runtime! macros/less.vim' -" 
 
 # *Very* often used!
-alias ls='ls -Gh'
+alias ls='ls -Gh --color=auto'
 alias l='ls'
 alias la='ls -A'
 alias ll='ls -l'
