@@ -16,30 +16,32 @@ alias umount "umount -v"
 alias mv 'mv -vi'
 alias cp 'cp -vi'
 alias mkdir 'mkdir -v'
+alias tf 'terraform'
 
-# Short hand
-alias gi "grep -ri"
-alias g "grep -r"
-alias s 'sudo -s'
-
-# Useful
-alias server "python -m SimpleHTTPServer"
-alias notebook "ipython notebook --pylab=inline"
-alias qtconsole "ipython qtconsole --pylab=inline"
-alias ac "app/console"
-
-# Hosts
-alias milou "ssh -A qt@short-edition.com"
-alias hg "ssh qpleple@hg.ucsd.edu"
-
-# Paths
+alias cop 'gh copilot suggest'
+alias ghcs 'gh copilot suggest'
 
 # Brew should be the first result in the PATH
-set PATH /usr/local/sbin $PATH
-set PATH /usr/local/bin  $PATH 
+set PATH /usr/local/opt/python/libexec/bin $PATH # python
+set PATH /usr/local/bin $PATH # brew
+set PATH /usr/local/sbin $PATH # brew
 set PATH $PATH ~/bin
-set PATH $PATH /Users/qt/.rvm/gems/ruby-2.0.0-p0/bin/
+set PATH $PATH ~/.ebcli-virtual-env/executables
+set PATH $PATH ~/dotnet  # .NET
 
-#if test -s "/Users/qt/.rvm/scripts/rvm"
-#    /Users/qt/.rvm/scripts/rvm # Load RVM into a shell session *as a function*
-#end
+set DOTNET_ROOT ~/dotnet
+
+set -x LC_ALL en_US.UTF-8
+set -x LC_CTYPE en_US.UTF-8
+set -x LANG en_US.UTF-8
+
+set HOMEBREW_GITHUB_API_TOKEN "5e360824024e4aa29d66ea3c212e45f0b0d75b90"
+
+# Utilisation de ruby
+# https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac
+# https://github.com/JeanMertz/chruby-fish
+chruby ruby-3.0.1
+
+ssh-add -q
+
+zoxide init fish | source
